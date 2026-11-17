@@ -1,0 +1,18 @@
+{
+  "name": "posthog-contributors-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Firebase backend for a public PostHog contributor dashboard",
+  "main": "index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "test": "node test.js && node insights-test.js && node --test git-graph.test.js git-assessments.test.js git-assessments-http.test.js git-assessment-scores.test.js git-avatars-http.test.js hydrate-git-avatars.test.js materialize-git-avatars.test.js cerebras-git-scores.test.js git-scores-public.test.js",
+    "test:emulator": "node insights-emulator-test.js && node git-graph-emulator-test.js && node git-assessments-emulator.test.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^14.5.1",
+    "firebase-functions": "^7.4.0"
+  }
+}

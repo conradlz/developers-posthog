@@ -1,0 +1,54 @@
+.git-scores {
+  min-width: 0;
+  margin-top: 16px;
+  padding: 25px;
+  color: #34483a;
+  background: #fff;
+  border: 1px solid #e7ece3;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(33, 49, 32, .025);
+}
+
+.git-scores-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.git-scores-header h2 { margin: 7px 0; font-size: 22px; letter-spacing: -.7px; }
+.git-scores-header p { max-width: 760px; margin: 0; color: #66796a; font-size: 12px; line-height: 1.6; }
+.git-scores-eyebrow { color: #829481; font-size: 10px; font-weight: 750; letter-spacing: 1.6px; }
+.git-scores-badge { flex: none; padding: 8px 10px; border-radius: 6px; background: #f2f5ef; color: #627862; font-size: 9px; font-weight: 750; letter-spacing: .6px; }
+.git-scores-tabs { display: flex; gap: 4px; width: fit-content; max-width: 100%; padding: 4px; margin-top: 22px; border-radius: 8px; background: #f0f4ee; }
+.git-scores-tabs button { padding: 9px 16px; border: 0; border-radius: 6px; background: transparent; color: #65786a; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.git-scores-tabs button[aria-selected="true"] { background: #fff; color: #315e4b; box-shadow: 0 1px 4px rgba(33, 49, 32, .12); }
+.git-scores-tabs button:focus-visible, .git-scores-table button:focus-visible { outline: 3px solid #d4933c; outline-offset: 2px; }
+.git-scores-chart-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 22px 0 12px; }
+.git-scores-chart-heading h3 { margin: 0; font-size: 15px; color: #34483a; }
+.git-scores-chart-heading p { margin: 5px 0 0; font-size: 11px; color: #718274; }
+.git-scores-chart-heading > span { display: inline-flex; align-items: center; gap: 7px; color: #627466; font-size: 11px; white-space: nowrap; }
+.git-scores-swatch { width: 10px; height: 10px; border-radius: 50%; background: #5c8b6c; }
+.git-scores-chart-wrap { position: relative; min-width: 0; overflow: hidden; border: 1px solid #edf1eb; border-radius: 8px; background: #fbfcfa; }
+.git-scores-chart { width: 100%; height: 390px; }
+.git-scores-chart-message { position: absolute; top: 40%; left: 50%; width: 70%; margin: 0; transform: translate(-50%, -50%); color: #66796a; font-size: 12px; text-align: center; pointer-events: none; }
+.git-scores-note { color: #687a6c; font-size: 11px; line-height: 1.5; }
+.git-scores-note { margin: 10px 0 16px; }
+.git-scores-methodology { margin: 18px 0; padding: 13px 15px; border-radius: 7px; background: #f4f7f1; color: #5c7061; font-size: 11px; line-height: 1.6; }
+.git-scores-methodology strong { color: #314b37; font-size: 12px; }
+.git-scores-methodology p { margin: 5px 0 0; }
+.git-scores-table-wrap { max-width: 100%; overflow-x: auto; }
+.git-scores-table { width: 100%; border-collapse: collapse; color: #536858; font-size: 11px; text-align: left; }
+.git-scores-table caption { padding: 0 0 10px; color: #34483a; font-size: 13px; font-weight: 700; text-align: left; }
+.git-scores-table th, .git-scores-table td { padding: 10px 12px; border-bottom: 1px solid #edf1eb; vertical-align: top; }
+.git-scores-table th { color: #607563; font-weight: 700; }
+.git-scores-table td:first-child, .git-scores-table td:last-child { white-space: nowrap; }
+.git-scores-table button { padding: 0; border: 0; background: none; color: #315e3b; font: inherit; font-weight: 700; text-align: left; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; cursor: pointer; }
+.git-scores-table button { display: inline-flex; align-items: center; gap: 8px; }
+.git-scores-table-empty { color: #687a6c; font-size: 12px; }
+@media (max-width: 700px) {
+  .git-scores { padding: 18px; }
+  .git-scores-header { flex-direction: column; }
+  .git-scores-tabs { width: 100%; }
+  .git-scores-tabs button { flex: 1; padding: 9px 7px; }
+  .git-scores-table { min-width: 700px; }
+}

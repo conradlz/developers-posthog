@@ -1,0 +1,52 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/api/git-graph",
+        "function": {
+          "functionId": "gitGraph",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/git-assessments",
+        "function": {
+          "functionId": "gitAssessments",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/git-avatars",
+        "function": {
+          "functionId": "gitAvatars",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/git-scores",
+        "function": {
+          "functionId": "gitScores",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "database": {
+    "rules": "functions/database.rules.json"
+  },
+  "emulators": {
+    "hosting": { "port": 5050 },
+    "functions": { "port": 5001 },
+    "database": { "port": 9000 },
+    "ui": { "enabled": false }
+  }
+}
